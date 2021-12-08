@@ -1,0 +1,66 @@
+colors:
+  # Default colors
+  primary:
+    background: "#002b36"
+    foreground: "#93a1a1"
+
+  # Normal colors
+  normal:
+    black:    "#000000"
+    red:      "#AA0000"
+    green:    "#00AA00"
+    yellow:   "#AA5500"
+    blue:     "#0000AA"
+    magenta:  "#AA00AA"
+    cyan:     "#00AAAA"
+    white:    "#AAAAAA"
+
+  # Bright colors
+  bright:
+    black:    "#555555"
+    red:      "#FF5555"
+    green:    "#55FF55"
+    yellow:   "#FFFF55"
+    blue:     "#5555FF"
+    magenta:  "#FF55FF"
+    cyan:     "#55FFFF"
+    white:    "#FFFFFF"
+
+background_opacity: 0.95
+
+font:
+  normal:
+    family: "Meslo LGS NF"
+    style:  Bold
+  bold:
+    family: "Meslo LGS NF"
+    style:  Bold
+  italic:
+    family: "Meslo LGS NF"
+    style:  Italic
+  bold_italic:
+    family: "Meslo LGS NF"
+    style:  Bold Italic
+
+  # Point size
+  size: 16.0
+
+  offset:
+    x: 0
+    y: 0
+
+  glyph_offset:
+    x: 0
+    y: 0
+
+window:
+  padding:
+    x: 0
+    y: 0
+
+# Spread additional padding evenly around the terminal content.
+  dynamic_padding: true
+
+  dimensions:
+   columns: 120
+   lines: 30
