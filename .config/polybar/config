@@ -1,0 +1,322 @@
+;==========================================================
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;==========================================================
+
+; Global WM Settings
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+;==========================================================
+
+; File Inclusion
+; Include an external file, like module file, etc.
+
+include-file = ~/.config/polybar/colors/colors.ini
+include-file = ~/.config/polybar/modules/linux.ini
+include-file = ~/.config/polybar/modules/launcher.ini
+include-file = ~/.config/polybar/modules/window.ini
+include-file = ~/.config/polybar/modules/workspaces.ini
+include-file = ~/.config/polybar/modules/system.ini
+include-file = ~/.config/polybar/modules/power.ini
+
+;==========================================================
+
+; Top Bar Settings
+
+[bar/top]
+; General
+monitor-strict = false
+override-redirect = false
+fixed-center = true
+
+; Background and Foreground color of the bar
+background = ${color.background}
+foreground = ${color.foreground}
+
+; Width & Height
+width = 100%
+height = 36
+
+; Positioning
+offset-x = 0
+offset-y = 0
+
+; Radius for rounded corners
+radius = 18
+
+; Border Around Bar
+border-size = 0
+border-color = ${color.black}
+
+; Underline and Overline
+line-size = 4
+line-color = ${color.foreground}
+
+; Margin & Padding
+module-margin-left = 0
+module-margin-right = 0
+
+padding = 0
+
+; Fonts used
+font-0=Nasalization:size=15;3
+font-1=Material Design Icons:size=15;3
+
+;==========================================================
+
+[bar/linux]
+
+inherit = bar/top
+
+; Width & Height
+width = 36
+height = 36
+
+; Positioning
+offset-x = 1%
+offset-y = 12
+
+modules-center = linux
+
+;==========================================================
+
+[bar/launcher]
+
+inherit = bar/top
+
+; Width & Height
+width = 220
+height = 36
+
+; Positioning
+offset-x = 4%:-8
+offset-y = 12
+
+modules-center = browser file code screenshot spotify
+
+;==========================================================
+
+[bar/window]
+
+inherit = bar/top
+
+; Width & Height
+width = 24%
+height = 36
+
+; Positioning
+offset-x = 38%
+offset-y = 12
+
+modules-center = window
+
+;==========================================================
+
+[bar/keyboard]
+
+inherit = bar/top
+
+; Width & Height
+width = 4%:16
+height = 36
+
+; Positioning
+offset-x = 16%:-10
+offset-y = 12
+
+modules-center = keyboard
+
+;==========================================================
+
+[bar/cpu]
+
+inherit = bar/top
+
+; Width & Height
+width = 6%:16
+height = 36
+
+; Positioning
+offset-x = 20%:16
+offset-y = 12
+
+modules-center = cpu
+
+;==========================================================
+
+[bar/ram]
+
+inherit = bar/top
+
+; Width & Height
+width = 8%:24
+height = 36
+
+; Positioning
+offset-x = 28%:4
+offset-y = 12
+
+modules-center = ram
+
+;==========================================================
+
+[bar/date]
+
+inherit = bar/top
+
+; Width & Height
+width = 16%
+height = 36
+
+; Positioning
+offset-x = 62%:10
+offset-y = 12
+
+; Margin & Padding
+module-margin-left = 2
+module-margin-right = 2
+
+padding = 0
+
+modules-center = date
+
+;==========================================================
+
+[bar/time]
+
+inherit = bar/top
+
+; Width & Height
+width = 10%:8
+height = 36
+
+; Positioning
+offset-x = 78%:20
+offset-y = 12
+
+; Margin & Padding
+module-margin-left = 2
+module-margin-right = 2
+
+padding = 0
+
+modules-center = time
+
+;==========================================================
+
+[bar/battery]
+
+inherit = bar/top
+
+; Width & Height
+width = 6%:8
+height = 36
+
+; Positioning
+offset-x = 90%:2
+offset-y = 12
+
+modules-center = battery
+
+;==========================================================
+
+[bar/power]
+
+inherit = bar/top
+
+; Width & Height
+width = 36
+height = 36
+
+; Positioning
+offset-x = 98%:-18
+offset-y = 12
+
+modules-center = power
+
+;==========================================================
+
+; Bar Settings
+
+[bar/bottom]
+; General
+monitor-strict = false
+override-redirect = false
+bottom = true
+fixed-center = true
+
+; Background and Foreground color of the bar
+background = ${color.background}
+foreground = ${color.foreground}
+
+; Width & Height
+width = 100%
+height = 36
+
+; Positioning
+offset-x = 0
+offset-y = 0
+
+; Radius for rounded corners
+radius = 18
+
+; Border Around Bar
+border-size = 0
+border-color = ${color.black}
+
+; Underline and Overline
+line-size = 4
+line-color = ${color.foreground}
+
+; Margin & Padding
+module-margin-left = 0
+module-margin-right = 0
+
+padding = 0
+
+; Fonts used
+font-0=Nasalization:size=15;3
+font-1=Material Design Icons:size=15;3
+
+;==========================================================
+
+[bar/bspwm]
+
+inherit = bar/bottom
+
+; Width & Height
+width = 440
+height = 36
+
+; Positioning
+offset-x = 50%:-222
+offset-y = 12
+
+modules-center = workspaces
+
+;==========================================================
+
+;[bar/wifi]
+
+;inherit = bar/bottom
+
+;; Width & Height
+;width = 10%
+;height = 36
+
+;; Positioning
+;offset-x = 80%:12
+;offset-y = 12
+
+;modules-center = network
+
+;==========================================================

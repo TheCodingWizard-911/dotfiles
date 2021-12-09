@@ -1,0 +1,27 @@
+@import "colors.rasi"
+
+* {
+	font:				 	"Nasalization 12";
+
+    text-color:             @white;
+    background-color:       @background;
+}
+
+window {
+    width:      			250px;
+
+    padding:    			20px;
+
+    border:					2px;
+    border-radius:          16px;
+    border-color:           @foreground;
+
+    location:               northeast;
+    x-offset:               -16px;
+    y-offset:               64px;
+}
+
+entry {
+    expand: 				true;
+    text-color:				@white;
+}
