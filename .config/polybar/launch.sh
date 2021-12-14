@@ -15,8 +15,9 @@ polybar -rq linux 2>&1 | tee -a /tmp/polybar.log & disown
 polybar -rq power 2>&1 | tee -a /tmp/polybar.log & disown
 polybar -rq bspwm 2>&1 | tee -a /tmp/polybar.log & disown
 polybar -rq window 2>&1 | tee -a /tmp/polybar.log & disown
+polybar -rq volume 2>&1 | tee -a /tmp/polybar.log & disown
 polybar -rq date 2>&1 | tee -a /tmp/polybar.log & disown
 polybar -rq time 2>&1 | tee -a /tmp/polybar.log & disown
-# polybar -rq wifi 2>&1 | tee -a /tmp/polybar.log & disown
+polybar -rq wifi 2>&1 | tee -a /tmp/polybar.log & disown
 polybar -rq battery 2>&1 | tee -a /tmp/polybar.log & disown
 polybar -rq launcher 2>&1 | tee -a /tmp/polybar.log & disown

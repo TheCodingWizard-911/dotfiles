@@ -23,10 +23,13 @@ margin-bottom = 0
 include-file = ~/.config/polybar/colors/colors.ini
 include-file = ~/.config/polybar/modules/linux.ini
 include-file = ~/.config/polybar/modules/launcher.ini
-include-file = ~/.config/polybar/modules/window.ini
-include-file = ~/.config/polybar/modules/workspaces.ini
 include-file = ~/.config/polybar/modules/system.ini
+include-file = ~/.config/polybar/modules/window.ini
+include-file = ~/.config/polybar/modules/datetime.ini
+include-file = ~/.config/polybar/modules/battery.ini
+include-file = ~/.config/polybar/modules/volume.ini
 include-file = ~/.config/polybar/modules/power.ini
+include-file = ~/.config/polybar/modules/workspaces.ini
 
 ;==========================================================
 
@@ -101,7 +104,7 @@ height = 36
 offset-x = 4%:-8
 offset-y = 12
 
-modules-center = browser file code screenshot spotify
+modules-center = browser file code spotify screenshot
 
 ;==========================================================
 
@@ -289,6 +292,22 @@ font-1=Material Design Icons:size=15;3
 
 ;==========================================================
 
+[bar/volume]
+
+inherit = bar/bottom
+
+; Width & Height
+width = 8%
+height = 36
+
+; Positioning
+offset-x = 30%
+offset-y = 12
+
+modules-center = pulseaudio
+
+;==========================================================
+
 [bar/bspwm]
 
 inherit = bar/bottom
@@ -298,25 +317,25 @@ width = 440
 height = 36
 
 ; Positioning
-offset-x = 50%:-222
+offset-x = 50%:-220
 offset-y = 12
 
 modules-center = workspaces
 
 ;==========================================================
 
-;[bar/wifi]
+[bar/wifi]
 
-;inherit = bar/bottom
+inherit = bar/bottom
 
-;; Width & Height
-;width = 10%
-;height = 36
+; Width & Height
+width = 10%
+height = 36
 
-;; Positioning
-;offset-x = 80%:12
-;offset-y = 12
+; Positioning
+offset-x = 62%
+offset-y = 12
 
-;modules-center = network
+modules-center = network
 
 ;==========================================================
